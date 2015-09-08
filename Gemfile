@@ -21,4 +21,5 @@ gem 'rspec-rails'
 gem 'capybara'
 gem 'factory_girl'
 gem 'omniauth-facebook'
+gem 'figaro'
 
