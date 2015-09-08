@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RollingStone</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>RollingStone</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-<%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-</body>
+    <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Diplomata+SC' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+  </head>
+
+  <body >
+    <div class = 'all'>
+      <p class = 'rolling_logo'><%= link_to root_path do %>Rolling <br> Stone<%end%></p>
+        <ul class = 'links'>
+          <% if current_user %>
+            <%= current_user.name %>
+            <li><%= link_to "Dashboard", root_path %></li>
+            <li><%= link_to "Sign Out", 'sign_out', method: :delete %> </li>
+          <% else %>
+            <li class = 'out'><%= link_to "auth/facebook" do %> <%= image_tag('facebook.png',
+              width: '300', height: '60', class: 'img-circle') %><% end %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+    <%= yield %>
+  </body>
 </html>
