@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+.links
+ {
+  float: right;
+  display: inline-block;
+}
+
+p {
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.out {
+  display: inline-block;
+}
+
+.profile_pic {
+  height:200px;
+}
+
+.jumbotron {
+  background-image: url('../images/car.jpg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  width:100%;
+}
+
+
+.rolling_logo {
+  font-family: 'Diplomata SC';
+
+}
