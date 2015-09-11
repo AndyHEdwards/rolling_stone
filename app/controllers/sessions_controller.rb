@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     session[:omniauth] = auth.expect('extra')
     user = User.sign_in_from_omniauth(auth)
     session[:user_id] = user.id
-    redirect_to root_path, notice: "Signed In"
+    redirect_to journal_index_path, notice: "Signed In"
   end
 
   def auth_hash

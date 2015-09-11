@@ -16,6 +16,7 @@ group :development, :test do
   gem 'omniauth-facebook'
   gem 'figaro'
   gem 'bcrypt'
+  gem 'bootstrap-sass'
 end
 
 group :development do
