@@ -26,6 +26,7 @@
             <li class = 'out'><%= link_to "auth/facebook" do %> <%= image_tag('facebook.png',
               width: '300', height: '60', class: 'img-circle') %><% end %>
             </li>
+            <li><%= link_to "Or sign up", new_user_path %></li>
           <% end %>
         </ul>
     </div>
@@ -33,6 +34,7 @@
     <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+
   </body>
+      <%= debug(params) if Rails.env.development? %>
 </html>
